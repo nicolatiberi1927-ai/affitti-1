@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Affitti Brevi</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="index.html">
+                Affitti Brevi
+            </a>
+
+            <nav class="main-navigation">
+                <a href="index.html">Cerca</a>
+                <a href="login.html">Accedi</a>
+                <a href="registrazione.html">Registrati</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <p class="eyebrow">
+                    Trova il tuo prossimo soggiorno
+                </p>
+
+                <h1>
+                    Cerca un alloggio disponibile
+                </h1>
+
+                <p class="hero-description">
+                    Seleziona località, date, numero di ospiti
+                    e prezzo massimo.
+                </p>
+
+                <form id="search-form" class="search-form">
+                    <div class="form-field">
+                        <label for="localita">
+                            Località
+                        </label>
+
+                        <select id="localita" name="localita_id">
+                            <option value="">
+                                Tutte le località
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="data-arrivo">
+                            Data di arrivo
+                        </label>
+
+                        <input
+                            type="date"
+                            id="data-arrivo"
+                            name="data_arrivo"
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="data-partenza">
+                            Data di partenza
+                        </label>
+
+                        <input
+                            type="date"
+                            id="data-partenza"
+                            name="data_partenza"
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="numero-ospiti">
+                            Ospiti
+                        </label>
+
+                        <input
+                            type="number"
+                            id="numero-ospiti"
+                            name="numero_ospiti"
+                            min="1"
+                            placeholder="Es. 2"
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="prezzo-massimo">
+                            Prezzo massimo
+                        </label>
+
+                        <input
+                            type="number"
+                            id="prezzo-massimo"
+                            name="prezzo_massimo"
+                            min="1"
+                            step="0.01"
+                            placeholder="Es. 100"
+                        >
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="primary-button">
+                            Cerca
+                        </button>
+
+                        <button
+                            type="button"
+                            id="reset-button"
+                            class="secondary-button"
+                        >
+                            Azzera
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="container">
+                <div class="results-heading">
+                    <div>
+                        <p class="eyebrow">
+                            Risultati
+                        </p>
+
+                        <h2>Alloggi disponibili</h2>
+                    </div>
+
+                    <p id="results-count" class="results-count">
+                        Caricamento...
+                    </p>
+                </div>
+
+                <div
+                    id="message"
+                    class="message hidden"
+                    role="alert"
+                ></div>
+
+                <div
+                    id="loading"
+                    class="loading hidden"
+                    aria-live="polite"
+                >
+                    Ricerca in corso...
+                </div>
+
+                <div
+                    id="results"
+                    class="property-grid"
+                ></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                Progetto Gestione Affitti Brevi
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

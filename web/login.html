@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Accedi - Affitti Brevi</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="index.html">
+                Affitti Brevi
+            </a>
+
+            <nav class="main-navigation">
+                <a href="index.html">Cerca</a>
+                <a href="login.html">Accedi</a>
+                <a href="registrazione.html">Registrati</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="auth-main">
+        <section class="auth-card">
+            <p class="eyebrow">Area riservata</p>
+
+            <h1>Accedi</h1>
+
+            <p class="auth-description">
+                Inserisci email e password per gestire
+                prenotazioni o immobili.
+            </p>
+
+            <div
+                id="message"
+                class="message hidden"
+                role="alert"
+            ></div>
+
+            <form id="login-form" class="auth-form">
+                <div class="form-field">
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="primary-button full-width"
+                >
+                    Accedi
+                </button>
+            </form>
+
+            <p class="auth-alternative">
+                Non hai ancora un account?
+                <a href="registrazione.html">
+                    Registrati
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Progetto Gestione Affitti Brevi</p>
+        </div>
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Le mie prenotazioni - Affitti Brevi</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="index.html">
+                Affitti Brevi
+            </a>
+
+            <nav class="main-navigation">
+                <a href="index.html">Cerca</a>
+                <a href="prenotazioni.html">Le mie prenotazioni</a>
+
+                <button
+                    type="button"
+                    id="logout-button"
+                    class="navigation-button"
+                >
+                    Esci
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <section class="dashboard-heading">
+                <div>
+                    <p class="eyebrow">
+                        Area personale
+                    </p>
+
+                    <h1>Le mie prenotazioni</h1>
+
+                    <p id="user-description">
+                        Caricamento dei dati utente...
+                    </p>
+                </div>
+
+                <a
+                    href="index.html"
+                    class="primary-button"
+                >
+                    Cerca un altro alloggio
+                </a>
+            </section>
+
+            <div
+                id="message"
+                class="message hidden"
+                role="alert"
+            ></div>
+
+            <div
+                id="loading"
+                class="loading"
+                aria-live="polite"
+            >
+                Caricamento delle prenotazioni...
+            </div>
+
+            <section
+                id="bookings-container"
+                class="bookings-list"
+            ></section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Progetto Gestione Affitti Brevi</p>
+        </div>
+    </footer>
+
+    <script src="js/prenotazioni.js"></script>
+</body>
+</html>

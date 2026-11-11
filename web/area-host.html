@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Area host - Affitti Brevi</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="index.html">
+                Affitti Brevi
+            </a>
+
+            <nav class="main-navigation">
+                <a href="index.html">Ricerca pubblica</a>
+
+                <button
+                    type="button"
+                    id="show-properties-button"
+                    class="navigation-button"
+                >
+                    I miei immobili
+                </button>
+
+                <button
+                    type="button"
+                    id="show-bookings-button"
+                    class="navigation-button"
+                >
+                    Prenotazioni ricevute
+                </button>
+
+                <button
+                    type="button"
+                    id="logout-button"
+                    class="navigation-button"
+                >
+                    Esci
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <section class="dashboard-heading">
+                <div>
+                    <p class="eyebrow">Area host</p>
+
+                    <h1>Gestione degli alloggi</h1>
+
+                    <p id="host-description">
+                        Caricamento dei dati host...
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    id="new-property-button"
+                    class="primary-button"
+                >
+                    Pubblica un immobile
+                </button>
+            </section>
+
+            <div
+                id="message"
+                class="message hidden"
+                role="alert"
+            ></div>
+
+            <div
+                id="loading"
+                class="loading hidden"
+                aria-live="polite"
+            >
+                Caricamento in corso...
+            </div>
+
+            <section id="properties-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Proprietà</p>
+                        <h2>I miei immobili</h2>
+                    </div>
+
+                    <p id="properties-count"></p>
+                </div>
+
+                <div
+                    id="properties-container"
+                    class="host-property-grid"
+                ></div>
+            </section>
+
+            <section
+                id="bookings-section"
+                class="hidden"
+            >
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Richieste</p>
+                        <h2>Prenotazioni ricevute</h2>
+                    </div>
+
+                    <p id="bookings-count"></p>
+                </div>
+
+                <div
+                    id="host-bookings-container"
+                    class="bookings-list"
+                ></div>
+            </section>
+
+                        <section
+                id="property-form-section"
+                class="hidden"
+            >
+                <!-- Tutto il modulo già presente -->
+            </section>
+
+            <!-- INCOLLA QUI LA SEZIONE DEI SERVIZI -->
+
+            <section
+                id="services-section"
+                class="hidden"
+            >
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Dotazioni</p>
+
+                        <h2 id="services-title">
+                            Servizi dell'immobile
+                        </h2>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="close-services-button"
+                        class="secondary-button"
+                    >
+                        Chiudi
+                    </button>
+                </div>
+
+                <div class="management-card">
+                    <div
+                        id="services-message"
+                        class="message hidden"
+                        role="alert"
+                    ></div>
+
+                    <div
+                        id="services-loading"
+                        class="loading hidden"
+                    >
+                        Caricamento dei servizi...
+                    </div>
+
+                    <form id="services-form">
+                        <input
+                            type="hidden"
+                            id="services-property-id"
+                        >
+
+                        <div
+                            id="services-container"
+                            class="services-selection-grid"
+                        ></div>
+
+                        <div class="form-actions services-actions">
+                            <button
+                                type="button"
+                                id="cancel-services-button"
+                                class="secondary-button"
+                            >
+                                Annulla
+                            </button>
+
+                            <button
+                                type="submit"
+                                id="save-services-button"
+                                class="primary-button"
+                            >
+                                Salva servizi
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Progetto Gestione Affitti Brevi</p>
+        </div>
+    </footer>
+
+    <script src="js/area-host.js"></script>
+</body>
+</html>
